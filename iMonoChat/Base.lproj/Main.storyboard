@@ -322,10 +322,38 @@
                             <constraint firstAttribute="trailing" secondItem="qsP-1o-2bF" secondAttribute="trailing" constant="16" id="zbI-AW-p94"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Yfl-O3-CSp" kind="show" identifier="toCreateAccount" id="IJG-xr-w9c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mS7-2X-YRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1712.8" y="-276.61169415292358"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mrf-9T-nRJ">
+            <objects>
+                <viewController id="Yfl-O3-CSp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZpU-N5-tNB"/>
+                        <viewControllerLayoutGuide type="bottom" id="wRJ-cx-4pR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qlb-6c-Coc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oy-VM-dAa">
+                                <rect key="frame" x="313" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mD-Jc-z2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2465" y="-277"/>
         </scene>
     </scenes>
     <resources>
