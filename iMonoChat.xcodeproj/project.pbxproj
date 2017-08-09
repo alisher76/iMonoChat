@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		8D71909CD3984CB0997D5BD4 /* Pods_iMonoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C747811A426EDCF09BB369D /* Pods_iMonoChat.framework */; };
 		ACDE28971F3B95A30082A2F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28961F3B95A30082A2F4 /* AppDelegate.swift */; };
-		ACDE28991F3B95A30082A2F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28981F3B95A30082A2F4 /* ViewController.swift */; };
 		ACDE289C1F3B95A30082A2F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDE289A1F3B95A30082A2F4 /* Main.storyboard */; };
 		ACDE289E1F3B95A30082A2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDE289D1F3B95A30082A2F4 /* Assets.xcassets */; };
 		ACDE28A11F3B95A30082A2F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDE289F1F3B95A30082A2F4 /* LaunchScreen.storyboard */; };
 		ACDE28AC1F3B9A970082A2F4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28AA1F3B9A970082A2F4 /* SWRevealViewController.m */; };
+		ACDE28B11F3B9E7B0082A2F4 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */; };
+		ACDE28B31F3B9E8B0082A2F4 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +23,6 @@
 		71C17A6ACE9A6265B306CC4C /* Pods-iMonoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMonoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMonoChat/Pods-iMonoChat.release.xcconfig"; sourceTree = "<group>"; };
 		ACDE28931F3B95A30082A2F4 /* iMonoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMonoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE28961F3B95A30082A2F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACDE28981F3B95A30082A2F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACDE289B1F3B95A30082A2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACDE289D1F3B95A30082A2F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACDE28A01F3B95A30082A2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +30,8 @@
 		ACDE28A91F3B9A960082A2F4 /* iMonoChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iMonoChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		ACDE28AA1F3B9A970082A2F4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../Downloads/Udemy - iOS 11 and Swift 4 - From Beginner to Paid Professional/06-networking-apis-rest-and-building-a-slack-clone/attached_files/054-intro-to-chat-app/Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		ACDE28AB1F3B9A970082A2F4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Downloads/Udemy - iOS 11 and Swift 4 - From Beginner to Paid Professional/06-networking-apis-rest-and-building-a-slack-clone/attached_files/054-intro-to-chat-app/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
+		ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,6 @@
 		ACDE288A1F3B95A30082A2F4 = {
 			isa = PBXGroup;
 			children = (
-				ACDE28A81F3B9A800082A2F4 /* Supporting Files */,
 				ACDE28951F3B95A30082A2F4 /* iMonoChat */,
 				ACDE28941F3B95A30082A2F4 /* Products */,
 				69AA4C8323C2ECCB8F213783 /* Pods */,
@@ -75,8 +76,11 @@
 		ACDE28951F3B95A30082A2F4 /* iMonoChat */ = {
 			isa = PBXGroup;
 			children = (
+				ACDE28AF1F3B9E580082A2F4 /* Model */,
+				ACDE28AE1F3B9E510082A2F4 /* View */,
+				ACDE28AD1F3B9E450082A2F4 /* Controlller */,
+				ACDE28A81F3B9A800082A2F4 /* Supporting Files */,
 				ACDE28961F3B95A30082A2F4 /* AppDelegate.swift */,
-				ACDE28981F3B95A30082A2F4 /* ViewController.swift */,
 				ACDE289A1F3B95A30082A2F4 /* Main.storyboard */,
 				ACDE289D1F3B95A30082A2F4 /* Assets.xcassets */,
 				ACDE289F1F3B95A30082A2F4 /* LaunchScreen.storyboard */,
@@ -93,6 +97,30 @@
 				ACDE28A91F3B9A960082A2F4 /* iMonoChat-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		ACDE28AD1F3B9E450082A2F4 /* Controlller */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */,
+				ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */,
+			);
+			path = Controlller;
+			sourceTree = "<group>";
+		};
+		ACDE28AE1F3B9E510082A2F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACDE28AF1F3B9E580082A2F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EDFFEA364C85FC332BE267B8 /* Frameworks */ = {
@@ -226,7 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACDE28991F3B95A30082A2F4 /* ViewController.swift in Sources */,
+				ACDE28B31F3B9E8B0082A2F4 /* ChannelVC.swift in Sources */,
+				ACDE28B11F3B9E7B0082A2F4 /* ChatVC.swift in Sources */,
 				ACDE28971F3B95A30082A2F4 /* AppDelegate.swift in Sources */,
 				ACDE28AC1F3B9A970082A2F4 /* SWRevealViewController.m in Sources */,
 			);
