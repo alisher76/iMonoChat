@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D71909CD3984CB0997D5BD4 /* Pods_iMonoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C747811A426EDCF09BB369D /* Pods_iMonoChat.framework */; };
 		ACDE28971F3B95A30082A2F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28961F3B95A30082A2F4 /* AppDelegate.swift */; };
 		ACDE28991F3B95A30082A2F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28981F3B95A30082A2F4 /* ViewController.swift */; };
 		ACDE289C1F3B95A30082A2F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDE289A1F3B95A30082A2F4 /* Main.storyboard */; };
 		ACDE289E1F3B95A30082A2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACDE289D1F3B95A30082A2F4 /* Assets.xcassets */; };
 		ACDE28A11F3B95A30082A2F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDE289F1F3B95A30082A2F4 /* LaunchScreen.storyboard */; };
+		ACDE28AC1F3B9A970082A2F4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28AA1F3B9A970082A2F4 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56441309E94B27CBF4203697 /* Pods-iMonoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMonoChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMonoChat/Pods-iMonoChat.debug.xcconfig"; sourceTree = "<group>"; };
+		5C747811A426EDCF09BB369D /* Pods_iMonoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMonoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C17A6ACE9A6265B306CC4C /* Pods-iMonoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMonoChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMonoChat/Pods-iMonoChat.release.xcconfig"; sourceTree = "<group>"; };
 		ACDE28931F3B95A30082A2F4 /* iMonoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMonoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE28961F3B95A30082A2F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACDE28981F3B95A30082A2F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		ACDE289D1F3B95A30082A2F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACDE28A01F3B95A30082A2F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACDE28A21F3B95A30082A2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDE28A91F3B9A960082A2F4 /* iMonoChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iMonoChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		ACDE28AA1F3B9A970082A2F4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../Downloads/Udemy - iOS 11 and Swift 4 - From Beginner to Paid Professional/06-networking-apis-rest-and-building-a-slack-clone/attached_files/054-intro-to-chat-app/Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
+		ACDE28AB1F3B9A970082A2F4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Downloads/Udemy - iOS 11 and Swift 4 - From Beginner to Paid Professional/06-networking-apis-rest-and-building-a-slack-clone/attached_files/054-intro-to-chat-app/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D71909CD3984CB0997D5BD4 /* Pods_iMonoChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69AA4C8323C2ECCB8F213783 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56441309E94B27CBF4203697 /* Pods-iMonoChat.debug.xcconfig */,
+				71C17A6ACE9A6265B306CC4C /* Pods-iMonoChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ACDE288A1F3B95A30082A2F4 = {
 			isa = PBXGroup;
 			children = (
+				ACDE28A81F3B9A800082A2F4 /* Supporting Files */,
 				ACDE28951F3B95A30082A2F4 /* iMonoChat */,
 				ACDE28941F3B95A30082A2F4 /* Products */,
+				69AA4C8323C2ECCB8F213783 /* Pods */,
+				EDFFEA364C85FC332BE267B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +85,24 @@
 			path = iMonoChat;
 			sourceTree = "<group>";
 		};
+		ACDE28A81F3B9A800082A2F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE28AB1F3B9A970082A2F4 /* SWRevealViewController.h */,
+				ACDE28AA1F3B9A970082A2F4 /* SWRevealViewController.m */,
+				ACDE28A91F3B9A960082A2F4 /* iMonoChat-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDFFEA364C85FC332BE267B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C747811A426EDCF09BB369D /* Pods_iMonoChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACDE28A51F3B95A30082A2F4 /* Build configuration list for PBXNativeTarget "iMonoChat" */;
 			buildPhases = (
+				4FED21AF70CC5108344A6DC9 /* [CP] Check Pods Manifest.lock */,
 				ACDE288F1F3B95A30082A2F4 /* Sources */,
 				ACDE28901F3B95A30082A2F4 /* Frameworks */,
 				ACDE28911F3B95A30082A2F4 /* Resources */,
+				1F0A54F72FC0B16EF2229E11 /* [CP] Embed Pods Frameworks */,
+				6EF68FE52578568C92D3E513 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +138,7 @@
 				TargetAttributes = {
 					ACDE28921F3B95A30082A2F4 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -130,6 +173,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F0A54F72FC0B16EF2229E11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMonoChat/Pods-iMonoChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FED21AF70CC5108344A6DC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6EF68FE52578568C92D3E513 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMonoChat/Pods-iMonoChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ACDE288F1F3B95A30082A2F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +228,7 @@
 			files = (
 				ACDE28991F3B95A30082A2F4 /* ViewController.swift in Sources */,
 				ACDE28971F3B95A30082A2F4 /* AppDelegate.swift in Sources */,
+				ACDE28AC1F3B9A970082A2F4 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,13 +359,17 @@
 		};
 		ACDE28A61F3B95A30082A2F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56441309E94B27CBF4203697 /* Pods-iMonoChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = U3FSDK5XFF;
 				INFOPLIST_FILE = iMonoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.iMonoChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iMonoChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -281,13 +377,16 @@
 		};
 		ACDE28A71F3B95A30082A2F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71C17A6ACE9A6265B306CC4C /* Pods-iMonoChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = U3FSDK5XFF;
 				INFOPLIST_FILE = iMonoChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.iMonoChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iMonoChat-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +411,7 @@
 				ACDE28A71F3B95A30082A2F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
