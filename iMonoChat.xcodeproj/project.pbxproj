@@ -15,6 +15,7 @@
 		ACDE28AC1F3B9A970082A2F4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28AA1F3B9A970082A2F4 /* SWRevealViewController.m */; };
 		ACDE28B11F3B9E7B0082A2F4 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */; };
 		ACDE28B31F3B9E8B0082A2F4 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */; };
+		ACDE28B51F3BA3EB0082A2F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B41F3BA3EB0082A2F4 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		ACDE28AB1F3B9A970082A2F4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Downloads/Udemy - iOS 11 and Swift 4 - From Beginner to Paid Professional/06-networking-apis-rest-and-building-a-slack-clone/attached_files/054-intro-to-chat-app/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
 		ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		ACDE28B41F3BA3EB0082A2F4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,10 @@
 		ACDE28951F3B95A30082A2F4 /* iMonoChat */ = {
 			isa = PBXGroup;
 			children = (
+				ACDE28A81F3B9A800082A2F4 /* Supporting Files */,
 				ACDE28AF1F3B9E580082A2F4 /* Model */,
 				ACDE28AE1F3B9E510082A2F4 /* View */,
 				ACDE28AD1F3B9E450082A2F4 /* Controlller */,
-				ACDE28A81F3B9A800082A2F4 /* Supporting Files */,
 				ACDE28961F3B95A30082A2F4 /* AppDelegate.swift */,
 				ACDE289A1F3B95A30082A2F4 /* Main.storyboard */,
 				ACDE289D1F3B95A30082A2F4 /* Assets.xcassets */,
@@ -112,6 +114,7 @@
 		ACDE28AE1F3B9E510082A2F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ACDE28B41F3BA3EB0082A2F4 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				ACDE28B31F3B9E8B0082A2F4 /* ChannelVC.swift in Sources */,
 				ACDE28B11F3B9E7B0082A2F4 /* ChatVC.swift in Sources */,
+				ACDE28B51F3BA3EB0082A2F4 /* GradientView.swift in Sources */,
 				ACDE28971F3B95A30082A2F4 /* AppDelegate.swift in Sources */,
 				ACDE28AC1F3B9A970082A2F4 /* SWRevealViewController.m in Sources */,
 			);
