@@ -16,6 +16,8 @@
 		ACDE28B11F3B9E7B0082A2F4 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */; };
 		ACDE28B31F3B9E8B0082A2F4 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */; };
 		ACDE28B51F3BA3EB0082A2F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B41F3BA3EB0082A2F4 /* GradientView.swift */; };
+		ACDE28B81F3BAD190082A2F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B71F3BAD190082A2F4 /* Constants.swift */; };
+		ACDE28BA1F3BB1370082A2F4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE28B91F3BB1370082A2F4 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		ACDE28B41F3BA3EB0082A2F4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		ACDE28B71F3BAD190082A2F4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ACDE28B91F3BB1370082A2F4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		ACDE28951F3B95A30082A2F4 /* iMonoChat */ = {
 			isa = PBXGroup;
 			children = (
+				ACDE28B61F3BAD040082A2F4 /* Utilities */,
 				ACDE28A81F3B9A800082A2F4 /* Supporting Files */,
 				ACDE28AF1F3B9E580082A2F4 /* Model */,
 				ACDE28AE1F3B9E510082A2F4 /* View */,
@@ -107,6 +112,7 @@
 			children = (
 				ACDE28B01F3B9E7B0082A2F4 /* ChatVC.swift */,
 				ACDE28B21F3B9E8B0082A2F4 /* ChannelVC.swift */,
+				ACDE28B91F3BB1370082A2F4 /* LoginVC.swift */,
 			);
 			path = Controlller;
 			sourceTree = "<group>";
@@ -124,6 +130,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACDE28B61F3BAD040082A2F4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ACDE28B71F3BAD190082A2F4 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		EDFFEA364C85FC332BE267B8 /* Frameworks */ = {
@@ -259,9 +273,11 @@
 			files = (
 				ACDE28B31F3B9E8B0082A2F4 /* ChannelVC.swift in Sources */,
 				ACDE28B11F3B9E7B0082A2F4 /* ChatVC.swift in Sources */,
+				ACDE28BA1F3BB1370082A2F4 /* LoginVC.swift in Sources */,
 				ACDE28B51F3BA3EB0082A2F4 /* GradientView.swift in Sources */,
 				ACDE28971F3B95A30082A2F4 /* AppDelegate.swift in Sources */,
 				ACDE28AC1F3B9A970082A2F4 /* SWRevealViewController.m in Sources */,
+				ACDE28B81F3BAD190082A2F4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
