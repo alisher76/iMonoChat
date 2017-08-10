@@ -104,23 +104,14 @@ class AuthService {
             "avatarColor": avatarColor,
         ]
         
-        let header = [
-            "Authorization": "Bearer \(AuthService.instance.authToken)",
-            "Content-Type": "application/json; characterset=utf-8"]
         
-        request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (responce) in
+        
+        request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (responce) in
             
             if responce.result.error == nil {
                 
                 guard let data = responce.data else { return }
-                let json = JSON(data: data)
-                let id = json["_id"].stringValue
-                let color = json["avatarColor"].stringValue
-                let avatarName = json["avatarName"].stringValue
-                let email = json["email"].stringValue
-                let name = json["name"].stringValue
-                
-                UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+                self.setUserInfo(data: data)
                 self.isLoggedIn = true
                 completion(true)
             } else {
@@ -132,6 +123,28 @@ class AuthService {
         
     }
     
-    
-    
+    func findUserByEmail(completion: @escaping CompletionHandler) {
+        
+        request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (responce) in
+            if responce.result.error == nil {
+                guard let data = responce.data else { return }
+                self.setUserInfo(data: data)
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(responce.result.error as Any)
+            }
+         }
+    }
+        
+        func setUserInfo(data: Data) {
+            let json = JSON(data: data)
+            let id = json["_id"].stringValue
+            let color = json["avatarColor"].stringValue
+            let avatarName = json["avatarName"].stringValue
+            let email = json["email"].stringValue
+            let name = json["name"].stringValue
+            
+            UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
+        }
 }

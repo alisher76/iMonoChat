@@ -279,6 +279,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginTapped:" destination="s51-4E-OnP" eventType="touchUpInside" id="GWd-Pi-rRl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUf-JV-4Z8">
                                                 <rect key="frame" x="0.0" y="35" width="240" height="20"/>
@@ -320,6 +323,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Yfb-MW-a8J">
+                                <rect key="frame" x="174" y="231" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -332,6 +340,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTextField" destination="hNK-GE-fRM" id="bVv-Le-9rE"/>
+                        <outlet property="spinner" destination="Yfb-MW-a8J" id="g2R-5n-UHs"/>
+                        <outlet property="userNameTextField" destination="7UW-Uc-Zfe" id="jRn-u0-MUO"/>
                         <segue destination="Yfl-O3-CSp" kind="show" identifier="toCreateAccount" id="IJG-xr-w9c"/>
                     </connections>
                 </viewController>
@@ -482,6 +493,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mdy-HE-LNm" firstAttribute="leading" secondItem="qlb-6c-Coc" secondAttribute="leading" constant="67" id="0L7-aC-Ous"/>
+                            <constraint firstItem="vAE-yO-VD2" firstAttribute="centerX" secondItem="qlb-6c-Coc" secondAttribute="centerX" id="6mA-oL-bpb"/>
                             <constraint firstItem="Jxm-O7-pt0" firstAttribute="top" secondItem="cwM-Ri-zcD" secondAttribute="bottom" constant="15" id="CRq-xi-9qR"/>
                             <constraint firstItem="cqd-BS-X49" firstAttribute="top" secondItem="ZpU-N5-tNB" secondAttribute="bottom" constant="100" id="DBI-pv-Gxo"/>
                             <constraint firstItem="pL0-QG-9eK" firstAttribute="top" secondItem="ZpU-N5-tNB" secondAttribute="bottom" constant="8" id="G3z-UF-slN"/>
@@ -492,6 +504,7 @@
                             <constraint firstItem="cwM-Ri-zcD" firstAttribute="top" secondItem="DhA-vI-BVp" secondAttribute="bottom" constant="17" id="bJb-G0-8re"/>
                             <constraint firstItem="vAE-yO-VD2" firstAttribute="centerX" secondItem="qlb-6c-Coc" secondAttribute="centerX" id="ddf-r5-t7t"/>
                             <constraint firstItem="wMx-Xi-bc8" firstAttribute="leading" secondItem="qlb-6c-Coc" secondAttribute="leading" constant="142" id="hbk-5T-DlQ"/>
+                            <constraint firstItem="vAE-yO-VD2" firstAttribute="centerY" secondItem="qlb-6c-Coc" secondAttribute="centerY" id="m02-hx-yHB"/>
                             <constraint firstItem="Mdy-HE-LNm" firstAttribute="top" secondItem="cqd-BS-X49" secondAttribute="bottom" constant="80" id="m2g-OO-ldy"/>
                             <constraint firstItem="cqd-BS-X49" firstAttribute="leading" secondItem="qlb-6c-Coc" secondAttribute="leading" constant="116" id="qhf-ja-h78"/>
                             <constraint firstItem="wMx-Xi-bc8" firstAttribute="top" secondItem="Mdy-HE-LNm" secondAttribute="bottom" constant="40" id="rFG-ru-Cey"/>
