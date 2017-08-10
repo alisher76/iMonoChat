@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="iMonoChat" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="gFP-eJ-ucZ" id="8Si-nT-ANx"/>
+                <outlet property="emailLabel" destination="SEg-9e-Cab" id="WgL-kO-7vb"/>
+                <outlet property="profileIMage" destination="mXF-ZV-Dv1" id="NOs-sR-SGJ"/>
+                <outlet property="userNameLabel" destination="tT5-pG-Vso" id="hYH-NV-8Gb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yourProfileLabel" destination="lCT-l1-5U9" id="f7q-LY-XiG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFP-eJ-ucZ" userLabel="bgView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJj-fF-9S5">
+                    <rect key="frame" x="20" y="173.5" width="335" height="320"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTP-fj-Qvb">
+                            <rect key="frame" x="299" y="8" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="JPZ-kx-xzU"/>
+                                <constraint firstAttribute="width" constant="28" id="csM-W9-xdz"/>
+                            </constraints>
+                            <state key="normal" image="closeButton"/>
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="jJ7-WZ-4NJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcV-2p-mwv" customClass="RoundedButton" customModule="iMonoChat" customModuleProvider="target">
+                            <rect key="frame" x="132" y="285" width="70" height="27"/>
+                            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="0.44290453767123289" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="G6S-sO-Ryw"/>
+                                <constraint firstAttribute="width" constant="70" id="Psr-t3-9Bs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="logouButtonTapped:" destination="-1" eventType="touchUpInside" id="p9S-2r-Q1h"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VY6-c5-mGg">
+                            <rect key="frame" x="97" y="62.5" width="140" height="195.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCT-l1-5U9">
+                                    <rect key="frame" x="18.5" y="0.0" width="103.5" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-ZV-Dv1" customClass="CircleImage" customModule="iMonoChat" customModuleProvider="target">
+                                    <rect key="frame" x="25" y="37.5" width="90" height="90"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="90" id="OdR-us-5e7"/>
+                                        <constraint firstAttribute="width" constant="90" id="seG-DD-cWf"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AliMono" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-pG-Vso">
+                                    <rect key="frame" x="31" y="137.5" width="78" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aliMono@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEg-9e-Cab">
+                                    <rect key="frame" x="0.0" y="175" width="140" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.27949094769999999" green="0.72862249609999996" blue="0.99901396040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="LTP-fj-Qvb" firstAttribute="top" secondItem="HJj-fF-9S5" secondAttribute="top" constant="8" id="1fQ-i7-vrp"/>
+                        <constraint firstItem="GcV-2p-mwv" firstAttribute="leading" secondItem="HJj-fF-9S5" secondAttribute="leading" constant="132" id="Mee-Ra-ler"/>
+                        <constraint firstAttribute="trailing" secondItem="LTP-fj-Qvb" secondAttribute="trailing" constant="8" id="OtM-Ym-KzG"/>
+                        <constraint firstAttribute="height" constant="320" id="bdM-ZG-g62"/>
+                        <constraint firstItem="GcV-2p-mwv" firstAttribute="top" secondItem="SEg-9e-Cab" secondAttribute="bottom" constant="27" id="qSz-Hq-SR8"/>
+                        <constraint firstItem="VY6-c5-mGg" firstAttribute="centerY" secondItem="HJj-fF-9S5" secondAttribute="centerY" id="qWn-ZM-RhO"/>
+                        <constraint firstItem="VY6-c5-mGg" firstAttribute="centerX" secondItem="HJj-fF-9S5" secondAttribute="centerX" id="uzW-vy-NQc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gFP-eJ-ucZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="24h-n7-cH4"/>
+                <constraint firstItem="HJj-fF-9S5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="4o8-sd-hAG"/>
+                <constraint firstAttribute="bottom" secondItem="gFP-eJ-ucZ" secondAttribute="bottom" id="FSH-Bm-gU2"/>
+                <constraint firstAttribute="trailing" secondItem="HJj-fF-9S5" secondAttribute="trailing" constant="20" id="Qou-uG-hRl"/>
+                <constraint firstItem="HJj-fF-9S5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="g0b-g7-pml"/>
+                <constraint firstAttribute="trailing" secondItem="gFP-eJ-ucZ" secondAttribute="trailing" id="iRK-KB-8P1"/>
+                <constraint firstItem="gFP-eJ-ucZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ke7-MN-m23"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+        <image name="profileDefault" width="192" height="192"/>
+    </resources>
+</document>
