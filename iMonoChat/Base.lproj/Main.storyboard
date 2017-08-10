@@ -128,7 +128,7 @@
                                     <action selector="loginButtonTapped:" destination="mwS-en-c4t" eventType="touchUpInside" id="2rK-DD-fdk"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="C3f-ph-qZo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="C3f-ph-qZo" customClass="CircleImage" customModule="iMonoChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="1nt-PH-RF1"/>
@@ -449,7 +449,7 @@
                                     <action selector="pickAvatarTapped:" destination="Yfl-O3-CSp" eventType="touchUpInside" id="hxd-e6-wFS"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="wMx-Xi-bc8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="wMx-Xi-bc8" customClass="CircleImage" customModule="iMonoChat" customModuleProvider="target">
                                 <rect key="frame" x="142" y="369.5" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Igh-cs-GVP"/>
@@ -473,6 +473,10 @@
                                     <action selector="closeButtonTapped:" destination="Yfl-O3-CSp" eventType="touchUpInside" id="eU6-Mm-xuU"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vAE-yO-VD2">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -485,16 +489,19 @@
                             <constraint firstItem="cwM-Ri-zcD" firstAttribute="leading" secondItem="qlb-6c-Coc" secondAttribute="leading" constant="120" id="Yeb-w9-MZR"/>
                             <constraint firstItem="DhA-vI-BVp" firstAttribute="top" secondItem="Mdy-HE-LNm" secondAttribute="bottom" constant="40" id="aNE-XK-MWW"/>
                             <constraint firstItem="cwM-Ri-zcD" firstAttribute="top" secondItem="DhA-vI-BVp" secondAttribute="bottom" constant="17" id="bJb-G0-8re"/>
+                            <constraint firstItem="vAE-yO-VD2" firstAttribute="centerX" secondItem="qlb-6c-Coc" secondAttribute="centerX" id="ddf-r5-t7t"/>
                             <constraint firstItem="wMx-Xi-bc8" firstAttribute="leading" secondItem="qlb-6c-Coc" secondAttribute="leading" constant="142" id="hbk-5T-DlQ"/>
                             <constraint firstItem="Mdy-HE-LNm" firstAttribute="top" secondItem="cqd-BS-X49" secondAttribute="bottom" constant="80" id="m2g-OO-ldy"/>
                             <constraint firstItem="cqd-BS-X49" firstAttribute="leading" secondItem="qlb-6c-Coc" secondAttribute="leading" constant="116" id="qhf-ja-h78"/>
                             <constraint firstItem="wMx-Xi-bc8" firstAttribute="top" secondItem="Mdy-HE-LNm" secondAttribute="bottom" constant="40" id="rFG-ru-Cey"/>
+                            <constraint firstItem="vAE-yO-VD2" firstAttribute="centerY" secondItem="qlb-6c-Coc" secondAttribute="centerY" id="uz2-PD-pz7"/>
                             <constraint firstItem="DhA-vI-BVp" firstAttribute="leading" secondItem="qlb-6c-Coc" secondAttribute="leading" constant="142" id="xfC-rm-Dsf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTxt" destination="oLK-c0-SQh" id="Smk-QH-RDe"/>
                         <outlet property="passwordTxt" destination="7ql-5y-Lrp" id="i3S-r0-n0Q"/>
+                        <outlet property="spinner" destination="vAE-yO-VD2" id="XJm-pw-aUS"/>
                         <outlet property="userImg" destination="wMx-Xi-bc8" id="H8P-r7-0f0"/>
                         <outlet property="userNameText" destination="SUW-QX-oTA" id="9jV-T6-8cx"/>
                         <segue destination="rc2-Xe-fH1" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="I3T-O5-Owr"/>
@@ -560,7 +567,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WEY-u5-vW2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WEY-u5-vW2" customClass="CircleImage" customModule="iMonoChat" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="10" width="80" height="80"/>
                                                 </imageView>
                                             </subviews>
