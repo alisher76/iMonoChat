@@ -8,5 +8,6 @@ target 'iMonoChat' do
   # Pods for iMonoChat
   pod 'Alamofire'
   pod 'SwiftyJSON'	
-  pod 'Socket.IO-Client-Swift' 
+  pod 'Socket.IO-Client-Swift'
+
 end

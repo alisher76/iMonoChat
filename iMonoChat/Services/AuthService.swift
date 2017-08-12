@@ -13,7 +13,6 @@ import SwiftyJSON
 class AuthService {
     
     static let instance = AuthService()
-    
     let defaults = UserDefaults.standard
     
     var isLoggedIn: Bool {
@@ -42,6 +41,8 @@ class AuthService {
             defaults.set(newValue, forKey: USER_EMAIL)
         }
     }
+    
+    
     
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler) {
         
@@ -104,8 +105,6 @@ class AuthService {
             "avatarColor": avatarColor,
         ]
         
-        
-        
         request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (responce) in
             
             if responce.result.error == nil {
@@ -120,6 +119,8 @@ class AuthService {
             }
             
         }
+        
+        
         
     }
     

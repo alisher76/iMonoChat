@@ -26,11 +26,11 @@ let monoPurplePlaceholder = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, 
 // segues
 
 let TO_LOGIN = "toLogin"
-let  TO_CREATE_ACCOUNT = "toCreateAccount"
+let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
 let AVATAR_CELL = "avatarCell"
-
+let CHANNEL_CELL = "channelCell"
 
 // user defaults
 let TOKEN_KEY = "token"
@@ -43,7 +43,7 @@ let USER_EMAIL = "userEmail"
 let HEADER = [
     "Content-Type": "application/json; characterset=utf-8"]
 let BEARER_HEADER = [
-    "Authorization": "Bearer \(AuthService.instance.authToken)",
+    "Authorization":"Bearer \(AuthService.instance.authToken)",
     "Content-Type": "application/json; characterset=utf-8"]
 
 // Notification Constants

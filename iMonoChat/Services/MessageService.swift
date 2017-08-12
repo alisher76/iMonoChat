@@ -21,6 +21,7 @@ class MessageService {
             if responce.result.error == nil {
                 guard let data = responce.data else { return }
                 if let json = JSON(data: data).array {
+                    
                     for item in json {
                         let name = item["name"].stringValue
                         let channelDescription = item["description"].stringValue
@@ -28,6 +29,8 @@ class MessageService {
                         let channel = Channel(title: name, description: channelDescription, id: id)
                         self.channels.append(channel)
                     }
+                    
+                
                 completion(true)
                 }
             } else {

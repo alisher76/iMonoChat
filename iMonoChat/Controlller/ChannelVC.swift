@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ChannelVC: UIViewController {
+class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // Outlets
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userImg: CircleImage!
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
@@ -19,6 +20,8 @@ class ChannelVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         self.revealViewController().rearViewRevealWidth = self.view.frame.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
@@ -55,5 +58,32 @@ class ChannelVC: UIViewController {
         setupUserInfo()
     }
     
-
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CHANNEL_CELL, for: indexPath) as? ChannelCell {
+            if MessageService.instace.channels.count == 0 {
+               cell.channelLabel?.text = "No Channels"
+            } else {
+                let channel = MessageService.instace.channels[indexPath.row]
+                cell.configureCell(channel: channel)
+            }
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(MessageService.instace.channels.count)
+        if MessageService.instace.channels.count == 0 {
+            return 1
+        } else {
+            return MessageService.instace.channels.count
+        }
+    }
 }

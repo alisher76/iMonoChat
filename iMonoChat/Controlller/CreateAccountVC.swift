@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CreateAccountVC: UIViewController {
     
     
@@ -52,11 +53,21 @@ class CreateAccountVC: UIViewController {
         guard let name = userNameText.text , userNameText.text != "" else { return }
         
         
+        
+        
+        
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
                 print("registered user")
                 AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
                     if success {
+                        AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                            if success {
+                                self.spinner.isHidden = true
+                                self.spinner.stopAnimating()
+                                NotificationCenter.default.post(Notification(name: NOTIF_USER_DATA_DID_CHANGE, object: nil))
+                            }
+                        })
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
                                 self.spinner.isHidden = true

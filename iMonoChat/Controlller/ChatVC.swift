@@ -29,9 +29,7 @@ class ChatVC: UIViewController {
         }
         
         MessageService.instace.findAllChannel { (success) in
-            if success {
-                print("SUCCESS")
-            }
+        
         }
         
     }
