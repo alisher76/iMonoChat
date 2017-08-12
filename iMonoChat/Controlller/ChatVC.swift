@@ -11,10 +11,15 @@ import UIKit
 class ChatVC: UIViewController {
     
     // Outlets
+    @IBOutlet weak var sendButtonOutlet: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var messageTextField: UITextField!
+    
+    
+    // Variables
+    var isTyping: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +29,7 @@ class ChatVC: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
         view.bindToKeyboard()
-        
+        sendButtonOutlet.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
         
@@ -38,6 +43,17 @@ class ChatVC: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNELS_SELECTED, object: nil)
         
+        SocketService.instance.getChatMessage { (success) in
+            if success {
+                self.tableView.reloadData()
+                
+                if MessageService.instace.messages.count > 0 {
+                    let endexPath = IndexPath(row: MessageService.instace.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endexPath, at: .bottom, animated: false)
+                }
+            }
+        }
+        
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail(completion: { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
@@ -50,17 +66,18 @@ class ChatVC: UIViewController {
             onLoginGetMessages()
         } else {
             channelNameLabel.text = "Please Log In"
+            tableView.reloadData()
         }
     }
     
     @objc func channelSelected(_ notif: Notification) {
         updateWithChannel()
-        getMessages()
     }
     
     func updateWithChannel() {
         let channelName = MessageService.instace.selectedChannel?.title ?? ""
         channelNameLabel.text = "#\(channelName)"
+        getMessages()
     }
     
     // Send Button
@@ -77,6 +94,21 @@ class ChatVC: UIViewController {
                     self.messageTextField.resignFirstResponder()
                 }
             })
+        }
+    }
+    
+    
+    // MARK: Message text field configure
+    
+    @IBAction func messageBoxTyping(_ sender: Any) {
+        if messageTextField.text == "" {
+            isTyping = false
+            sendButtonOutlet.isHidden = true
+        } else {
+            if isTyping == false {
+                sendButtonOutlet.isHidden = false
+            }
+            isTyping = true
         }
     }
     
