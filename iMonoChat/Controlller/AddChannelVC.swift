@@ -28,7 +28,15 @@ class AddChannelVC: UIViewController {
     }
     
     @IBAction func createButtonTapped(_ sender: Any) {
-        
+        guard let channelName = nameTxtField.text , nameTxtField.text != "" else {
+            return
+        }
+        guard let channelDescription = descriptionTextField.text else { return }
+        SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDescription) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     func setupView() {
@@ -38,6 +46,7 @@ class AddChannelVC: UIViewController {
         nameTxtField.attributedPlaceholder = NSAttributedString(string: "name", attributes: [NSAttributedStringKey.foregroundColor : monoPurplePlaceholder])
         descriptionTextField.attributedPlaceholder = NSAttributedString(string: "description", attributes: [NSAttributedStringKey.foregroundColor : monoPurplePlaceholder])
     }
+    
     
     @objc func closeTap(_ recognizer: UITapGestureRecognizer) {
         dismiss(animated: true, completion: nil)
