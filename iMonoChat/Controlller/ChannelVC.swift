@@ -33,6 +33,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.tableView.reloadData()
             }
         }
+        
+        SocketService.instance.getChatMessage { (newMessage) in
+            if newMessage.channelId != MessageService.instace.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instace.unreadChannels.append(newMessage.channelId)
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -112,6 +119,14 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let channel = MessageService.instace.channels[indexPath.row]
         MessageService.instace.selectedChannel = channel
+        
+        if MessageService.instace.unreadChannels.count > 0 {
+            MessageService.instace.unreadChannels = MessageService.instace.unreadChannels.filter { $0 != channel.id }
+        }
+        let index = IndexPath(row: indexPath.row, section: 0)
+        tableView.reloadRows(at: [index], with: .none)
+        tableView.selectRow(at: index, animated: false, scrollPosition: .none)
+        
         NotificationCenter.default.post(name: NOTIF_CHANNELS_SELECTED, object: nil)
         
         // RViewController has reveal toglle to close
