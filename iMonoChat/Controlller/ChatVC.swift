@@ -11,6 +11,7 @@ import UIKit
 class ChatVC: UIViewController {
     
     // Outlets
+    @IBOutlet weak var typingUserLabel: UILabel!
     @IBOutlet weak var sendButtonOutlet: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var channelNameLabel: UILabel!
@@ -54,6 +55,33 @@ class ChatVC: UIViewController {
             }
         }
         
+        SocketService.instance.getUsersTyping { (typingUsers) in
+            guard let channelId = MessageService.instace.selectedChannel?.id else { return }
+            var names = ""
+            var numberOfTypers = 0
+            
+            for (typingUser,channel) in typingUsers {
+                if typingUser != UserDataService.instance.name && channel == channelId {
+                    if names == "" {
+                        names = typingUser
+                    } else {
+                        names = "\(names), \(typingUser)"
+                    }
+                    numberOfTypers += 1
+                }
+            }
+            
+            if numberOfTypers > 0 && AuthService.instance.isLoggedIn == true {
+                var verb = "is"
+                if numberOfTypers > 1 {
+                    verb = "are"
+                }
+                self.typingUserLabel.text = "\(names) \(verb) typing..."
+            } else {
+                self.typingUserLabel.text = ""
+            }
+        }
+        
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail(completion: { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
@@ -92,6 +120,7 @@ class ChatVC: UIViewController {
                     print("message sent")
                     self.messageTextField.text = ""
                     self.messageTextField.resignFirstResponder()
+                    SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
                 }
             })
         }
@@ -101,12 +130,17 @@ class ChatVC: UIViewController {
     // MARK: Message text field configure
     
     @IBAction func messageBoxTyping(_ sender: Any) {
+        guard let channelId = MessageService.instace.selectedChannel?.id else {
+            return
+        }
         if messageTextField.text == "" {
             isTyping = false
             sendButtonOutlet.isHidden = true
+            SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
         } else {
             if isTyping == false {
                 sendButtonOutlet.isHidden = false
+                SocketService.instance.socket.emit("startType", UserDataService.instance.name, channelId)
             }
             isTyping = true
         }
