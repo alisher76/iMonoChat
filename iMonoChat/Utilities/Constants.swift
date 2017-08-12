@@ -19,6 +19,7 @@ let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNEL = "\(BASE_URL)channel/"
+let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel/"
 // Colors
 
 let monoPurplePlaceholder = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 0.5)
@@ -31,6 +32,8 @@ let UNWIND = "unwindToChannel"
 let TO_AVATAR_PICKER = "toAvatarPicker"
 let AVATAR_CELL = "avatarCell"
 let CHANNEL_CELL = "channelCell"
+let MESSAGE_CELL = "messageCell"
+
 
 // user defaults
 let TOKEN_KEY = "token"
