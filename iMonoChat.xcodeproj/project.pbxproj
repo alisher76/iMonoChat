@@ -12,6 +12,8 @@
 		AC282D4A1F3C287500E3CFD1 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC282D491F3C287500E3CFD1 /* RoundedButton.swift */; };
 		AC282D4C1F3C2F8B00E3CFD1 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC282D4B1F3C2F8B00E3CFD1 /* UserDataService.swift */; };
 		AC2839181F3E6FF20083CF1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2839171F3E6FF20083CF1B /* GoogleService-Info.plist */; };
+		AC28391B1F3EFD9A0083CF1B /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2839191F3EFD9A0083CF1B /* AddChannelVC.swift */; };
+		AC28391C1F3EFD9A0083CF1B /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC28391A1F3EFD9A0083CF1B /* AddChannelVC.xib */; };
 		ACD0EB0F1F3C379B00CE6E0C /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EB0E1F3C379B00CE6E0C /* AvatarPickerVC.swift */; };
 		ACD0EB111F3C390600CE6E0C /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EB101F3C390600CE6E0C /* AvatarCell.swift */; };
 		ACD0EB131F3CE92A00CE6E0C /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0EB121F3CE92A00CE6E0C /* CircleImage.swift */; };
@@ -41,6 +43,8 @@
 		AC282D491F3C287500E3CFD1 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		AC282D4B1F3C2F8B00E3CFD1 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		AC2839171F3E6FF20083CF1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC2839191F3EFD9A0083CF1B /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		AC28391A1F3EFD9A0083CF1B /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		ACD0EB0E1F3C379B00CE6E0C /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		ACD0EB101F3C390600CE6E0C /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		ACD0EB121F3CE92A00CE6E0C /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		ACD0EB181F3D017A00CE6E0C /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				AC28391A1F3EFD9A0083CF1B /* AddChannelVC.xib */,
 				ACD0EB151F3D015800CE6E0C /* ProfileVC.xib */,
 			);
 			path = XIBs;
@@ -163,6 +168,7 @@
 				ACDE28BB1F3BB5B40082A2F4 /* CreateAccountVC.swift */,
 				ACD0EB0E1F3C379B00CE6E0C /* AvatarPickerVC.swift */,
 				ACD0EB141F3D015800CE6E0C /* ProfileVC.swift */,
+				AC2839191F3EFD9A0083CF1B /* AddChannelVC.swift */,
 			);
 			path = Controlller;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			files = (
 				ACD0EB171F3D015800CE6E0C /* ProfileVC.xib in Resources */,
 				ACDE28A11F3B95A30082A2F4 /* LaunchScreen.storyboard in Resources */,
+				AC28391C1F3EFD9A0083CF1B /* AddChannelVC.xib in Resources */,
 				AC2839181F3E6FF20083CF1B /* GoogleService-Info.plist in Resources */,
 				ACDE289E1F3B95A30082A2F4 /* Assets.xcassets in Resources */,
 				ACDE289C1F3B95A30082A2F4 /* Main.storyboard in Resources */,
@@ -341,6 +348,7 @@
 				ACDE28BC1F3BB5B40082A2F4 /* CreateAccountVC.swift in Sources */,
 				AC282D481F3C1F3D00E3CFD1 /* AuthService.swift in Sources */,
 				ACDE28BA1F3BB1370082A2F4 /* LoginVC.swift in Sources */,
+				AC28391B1F3EFD9A0083CF1B /* AddChannelVC.swift in Sources */,
 				ACDE28B51F3BA3EB0082A2F4 /* GradientView.swift in Sources */,
 				ACD0EB111F3C390600CE6E0C /* AvatarCell.swift in Sources */,
 				ACDE28971F3B95A30082A2F4 /* AppDelegate.swift in Sources */,
